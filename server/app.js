@@ -6,7 +6,9 @@ import logger from 'morgan';
 import indexRouter from './routes/sample';
 import usersRouter from './routes/users';
 
-var app = express();
+let app = express();
+
+app.set("view engine", "ejs");
 
 app.use(logger('dev'));
 app.use(express.json());
